@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Escape the School 2</title>
+   </head>
+   <body>
+      <!--Code used in a youtube video. Link: https://www.youtube.com/watch?v=Jsy79HeAQ9Q-->
+      <audio src="Music/OldSchool_Hiphop.mp3" autoplay loop></audio>
+      <head>
+         <!--style css files-->
+         <link rel="stylesheet" type="text/css" href="CSSfiles/style.css">
+      </head>
+      <script src="jsFiles/rooms/room001.js"></script>
+      <script src="jsFiles/Menu.js"></script>
+      <!--menu-->
+      <div class="menu">
+         <a><img id="background" src="CSSfiles/images/TestMenu.gif" height=900 width=900></a> 
+         <p><img id="instructions" onclick="instructions()" src="CSSfiles/images/HelpButton.png" height=150 width=350></p>
+         <!--all images ids-->
+         <b><img id="play" onclick="room001()" src="CSSfiles/images/play-button.png" height=150 width=350></b>
+         <!--all characters-->
+         <div id = "mainC"><img id="Arthur" src="CSSfiles/images/Arthur.png" height=500 width=500></div>
+         <div id = "paulyC"><img id="Pauly" onclick="paulyTask()" src="CSSfiles/images/Pauly.png" height=350 width=350></div>
+         <div id = "aviC"><img id="Avi" onclick="aviTask()" src="CSSfiles/images/Avi.png" height=550 width=550></div>
+         <div id = "juliusC"><img id="Julius" onclick="juliusTask()" src="CSSfiles/images/Julius.png" height=350 width=350></div>
+         <div id = "jadinC"><img id="Jadin" src="CSSfiles/images/Jadin.png" onclick="jadinLines()" height=390 width=390></div>
+         <div id = "securityGuardC"><img id="securityGuard" onclick="guardLine()" src="CSSfiles/images/securityGuard.png" height=500 width=500></div>
+         <div id = "steveC"><img id="steve" onclick="steveLines()" src="CSSfiles/images/steve.png" height=750 width=750></div>
+         <!--classroom arrow-->
+         <div id = "arrow001"><img id="arrow1" onclick="hallway1()" src="CSSfiles/images/up-arrow.png" height=400 width=600></div>
+         <!--hallway 1 arrow-->
+         <div id = "arrow002"><img id="arrow2" onclick="washroomHallway()" src="CSSfiles/images/right_arrowHallway1.png" height=600 width=600></div>
+         <!--boys washroom arrow-->
+         <div id = "arrow003"><img id="arrow3" onclick="washroom()" src="CSSfiles/images/up-arrow2.png" height=400 width=600></div>
+         <!--leads to washroom hallway-->
+         <div id = "arrow004"><img id="arrow4" onclick="washroomHallway()" src="CSSfiles/images/right_arrowWashroom1.png" height=600 width=600></div>
+         <!--leads back to hallway 1-->
+         <div id ="arrow005"><img id="arrow5" onclick="hallway1()" src="CSSfiles/images/leftArrow_washroom.png" height=150 width=150></div>
+         <!--leads to stairs-->
+         <div id="arrow006"><img id="arrow6" onclick="stairs()" src="CSSfiles/images/leftArrow_stairs.png" height=150 width=150></div>
+         <!--leads back to hallway 1-->
+         <div id="arrow007"><img id="arrow7" onclick="hallway1()" src="CSSfiles/images/right_arrowStairs.png" height=500 width=500></div>
+         <!--money-->
+         <div id="dollar-bill"><img id="money1" onclick="money2()" src="CSSfiles/images/dollar-bill.png" height=50 width=100></div>
+         <!--leads to office hallway-->
+         <div id="arrow008"><img id="arrow8" onclick="officeHallway()" src="CSSfiles/images/down-arrowStairs.png" height=200 width=200></div>
+         <!--leads back to stairs-->
+         <div id="arrow009"><img id="arrow9" onclick="stairs()" src="CSSfiles/images/diagonalArrow_office.png" height=150 width=150></div>
+         <!--leads to cafeteria hallway-->
+         <div id="arrow010"><img id="arrow10" onclick="cafeteriaHallway()" src="CSSfiles/images/rightArrow-office.png" height=130 width=130></div>
+         <!--leads back to office hallway-->
+         <div id="arrow011"><img id="arrow11" onclick="officeHallway()" src="CSSfiles/images/leftArrow_hallway2.png" height=150 width=150></div>
+         <!--leads to cafetteria room(lower)-->
+         <div id="arrow012"><img id="arrow12" onclick="cafeteriaRoom()" src="CSSfiles/images/upArrow-hallway2.png" height=200 width=200></div>
+         <!--leads back to cafeteria hallway-->
+         <div id="arrow013"><img id="arrow13" onclick="cafeteriaHallway()" src="CSSfiles/images/upArrow-cafeteria.png" height=200 width=200></div>
+         <!--leads to cafeteria(upper)-->
+         <div id="arrow014"><img id="arrow14" onclick="cafeteriaReception()" src="CSSfiles/images/down-arrowCafeteria.png" height=200 width=200></div>
+         <!--leads back to cafeteria(lower)-->
+         <div id="arrow015"><img id="arrow15" onclick="cafeteriaRoom()" src="CSSfiles/images/down-arrowCafeteriaReception.png" height=200 width=200></div>
+         <!--cashier sprite-->
+         <div id="cashier"><img id="cafeteriaCashier" onclick="pizza1()" src="CSSfiles/images/cashierSprite.png" height=400 width=400></div>
+         <!--leads to courtyard hallway-->
+         <div id="arrow016"><img id="arrow16" onclick="courtyardHallway()" src="CSSfiles/images/rightArrow-hallway3.png" height=130 width=130></div>
+         <!--leads back to cafeteria hallway-->
+         <div id="arrow017"><img id="arrow17" onclick="cafeteriaHallway()" src="CSSfiles/images/leftArrow_courtyardHallway.png" height=130 width=130></div>
+         <!--leads to courtyard-->
+         <div id="arrow018"><img id="arrow18" onclick="courtyard()" src="CSSfiles/images/upArrow-courtyardHallway.png" height=170 width=170></div>
+         <!--leads back to courtyard hallway-->
+         <div id="arrow019"><img id="arrow19" onclick="courtyardHallway()" src="CSSfiles/images/leftArrow-courtyard.png" height=130 width=130></div>
+         <!--leads to exit hallway-->
+         <div id="arrow020"><img id="arrow20" onclick="exitHallway()" src="CSSfiles/images/rightArrow-exitHallway1.png" height=120 width=120></div>
+         <!--leads back to courtyard hallway-->
+         <div id="arrow021"><img id="arrow21" onclick="courtyardHallway()" src="CSSfiles/images/leftArrow_exitHallway1.png" height=120 width=120></div>
+         <!--ITEM ICONS-->
+         <div id="moneyInventory"><img id="moneyItem" src="CSSfiles/images/dollarBill_inventory.png" height=30 width=60></div>
+         <div id="phoneInventory"><img id="phoneItem" src="CSSfiles/images/phoneIcon.png" height=100 width=100></div>
+         <div id="pizzaBox"><img id="pizza_box" src="CSSfiles/images/open_pizzaBox.png" height=60 width=60></div>
+         <div id="arrow022"><img id="arrow22" onclick="room001()" src="CSSfiles/images/down-arrowHallway1.png" height=190 width=190></div>
+         <div id="juliusPhone"><img id="juliusPhone" onclick="phoneItem()" src="CSSfiles/images/juliusPhone.png" height=150 width=150></div>
+         <!--Arthur Position-->
+         <div id="arthurStairs"><img id="arthurStairs" src="CSSfiles/images/Arthur_Positioning/Arthur_stairs.png" height=500 width=500></div>
+         <div id="arthurWashroom"><img id="arthurWashroom" src="CSSfiles/images/Arthur_Positioning/Arthur_washroom.png" height=500 width=500></div>
+         <div id="arthurCourtyard"><img id="arthurCourtyard" src="CSSfiles/images/Arthur_Positioning/Arthur_courtyard.png" height=500 width=500></div>
+         <div id="escapeArrow"><img id="upArrow_escape" onclick="escaped()" src="CSSfiles/images/upArrow-escape.png" height=150 width=150></div>
+         <script>
+            //all not showing at the start of the game
+            document.getElementById("Arthur").style.display = "none";
+            document.getElementById("arrow1").style.display = "none";
+            document.getElementById("arrow2").style.display = "none";
+            document.getElementById("arrow3").style.display = "none";
+            document.getElementById("arrow4").style.display = "none";
+            document.getElementById("arrow5").style.display = "none";
+            document.getElementById("arrow6").style.display = "none";
+            document.getElementById("arrow7").style.display = "none";
+            document.getElementById("money1").style.display = "none";
+            document.getElementById("arrow8").style.display = "none";
+            document.getElementById("arrow9").style.display = "none";
+            document.getElementById("arrow10").style.display = "none";
+            document.getElementById("arrow11").style.display = "none";
+            document.getElementById("arrow12").style.display = "none";
+            document.getElementById("arrow13").style.display = "none";
+            document.getElementById("arrow14").style.display = "none";
+            document.getElementById("arrow15").style.display = "none";
+            document.getElementById("cafeteriaCashier").style.display = "none";
+            document.getElementById("arrow16").style.display = "none";
+            document.getElementById("arrow17").style.display = "none";
+            document.getElementById("arrow18").style.display = "none";
+            document.getElementById("arrow19").style.display = "none";
+            document.getElementById("arrow20").style.display = "none";
+            document.getElementById("arrow21").style.display = "none";
+            document.getElementById("Pauly").style.display = "none";
+            document.getElementById("Julius").style.display = "none";
+            document.getElementById("Avi").style.display = "none";
+            document.getElementById("Jadin").style.display = "none";
+            document.getElementById("securityGuard").style.display = "none";
+            document.getElementById("moneyItem").style.display = "none";
+            document.getElementById("pizza_box").style.display = "none";
+            document.getElementById("arrow22").style.display = "none";
+            document.getElementById("juliusPhone").style.display = "none";
+            document.getElementById("phoneItem").style.display = "none";
+            document.getElementById("upArrow_escape").style.display = "none";
+            document.getElementById("steve").style.display = "none";
+            //arthur positions
+            document.getElementById("arthurStairs").style.display = "none";
+            document.getElementById("arthurWashroom").style.display = "none";
+            document.getElementById("arthurCourtyard").style.display = "none";
+         </script>
+      </div>
+   </body>
+</html>
